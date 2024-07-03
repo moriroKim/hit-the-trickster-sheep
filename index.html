@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>양을 때리자!</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="custom-cursor">
+    <div id="gameCanvas">
+        <div id="game">
+            <div id="monster">
+                <div class="damage-count"></div>
+                <img class="mob-die" src="images/sheep-hitted.gif" alt="죽은 캐릭터">
+                <img class="mob-sprite custom-cursor-pointer" src="images/sheep-alert.webp" alt="캐릭터" style="cursor: url('../images/custom-cursor-pointer.gif'), pointer;">
+
+                <div id="mob-name">Sheep</div>
+            </div>
+            <div id="hp-gauge">
+                <div id="hp-value"></div>
+            </div>
+        </div>
+
+        <!-- <audio id="hitSFX">
+            <source src="hitSFX.mp3" type="audio/mpeg">
+        </audio> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

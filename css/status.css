@@ -1,0 +1,151 @@
+#game {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+#monster {
+    width: 164px;
+    height: 145px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    cursor: url('../images/custom-cursor-pointer.gif'), pointer;
+}
+
+#mob-name {
+    width: 80px;
+    padding: 2px 1px;
+
+    position: absolute;
+    top: 0;
+    left: 45px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.527);
+
+    font-size: 13px;
+    text-align: center;
+    color: white;
+}
+
+.mob-sprite {
+    width: 127px;
+    height: 135px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.mob-sprite:hover {
+    filter: drop-shadow(0 0 5px rgb(200, 206, 210)); /* 그림자 설정 */
+    transition: all 0.2s ease-in-out;
+}
+
+.mob-sprite:active {
+    filter: drop-shadow(0 0 5px rgb(232, 9, 9)); /* 그림자 설정 */
+}
+
+.mob-die {
+    display: none;
+    position: absolute;
+    right: 25px;
+    bottom: 35px;
+}
+
+.vibration {
+    animation: vibration .1s infinite;
+}
+
+@keyframes vibration {
+    from {
+        transform: translate(-2px, -2px);
+    }
+        
+    to {
+        transform: translate(2px, 2px);
+    }
+}
+
+#hp-gauge {
+    width: 150px;
+    height: 16px;
+    padding: 0px;
+
+
+    display: flex;
+    justify-content: flex-start;
+
+    position: absolute;
+    top: 380px;
+
+    border: 1px solid #efefefa3;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.692) inset;
+    background-color: #ffffff51;
+
+    font-size: 12px;
+    color:white;
+    text-align: left;
+
+    overflow: hidden;
+}
+
+#hp-value {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(217,64,64,1) 0%, rgba(138,28,28,1) 100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.damage-count {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: -2px;
+    color: rgb(211, 38, 38);
+    filter: drop-shadow(0 0 5px rgb(208, 22, 22)); /* 그림자 설정 */
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.64);
+
+    z-index: 999;
+    opacity: 0;
+    animation: damageFadeOut 1.5s linear;
+}
+
+@keyframes damageFadeOut {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+
+
+    75% {
+        transform: translateY(-60px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
