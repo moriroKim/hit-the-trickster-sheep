@@ -28,11 +28,12 @@ html, body {
     
 }
 
-/* 왜 변경이 안되는건지 모르겠어요 */
+
 .custom-cursor {
     cursor: url('../images/custom_cursor.png'), auto;
 }
 
+/* 왜 gif는 애니메이션이 재생이 안되는건지 모르겠어요 */
 .custom-cursor-pointer {
     cursor: url('../images/custom-cursor-pointer.gif'), pointer;
 }
