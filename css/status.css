@@ -16,8 +16,6 @@
     display: flex;
     justify-content: center;
     position: relative;
-
-    cursor: url('../images/custom-cursor-pointer.gif'), pointer;
 }
 
 #mob-name {
@@ -38,7 +36,6 @@
 .mob-sprite {
     width: 127px;
     height: 135px;
-    cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
