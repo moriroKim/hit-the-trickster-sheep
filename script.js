@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dmg = Math.floor(Math.random() * (10000000000 - 1 + 1)) + 1;
         hp -= dmg; 
         if (hp < 0) { hp = 0; } // hp가 0이하가 되면 음수가 되지않게 계속 hp에 0을 할당하며 초기화시킴.
-        console.log(`남은 체력의 양 : ${hp}`);
+        console.log(`남은 체력의 양 : ${hp}, 입힌 데미지 : ${dmg}`);
         const hpPercent = (hp / hpClac) * 100; // 변수 hp가 줄어드는 값에 따라 HP 게이지의 width 값을 %단위로 계산
         hpGage.style.width = `${hpPercent}%`;
 
